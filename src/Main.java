@@ -3,14 +3,38 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
 
-        Object[] conversor = {"Conversor de moeda", "Conversor de temperatura"};
-        JOptionPane.showInputDialog(null, "Escolha uma opção", "Menu", JOptionPane.PLAIN_MESSAGE, null, conversor, "Conversor de moeda").toString();
+        Menu menu = new Menu();
+
+
+        while(true) {
+            menu.CallMenu();
+
+            int continuarPrograma = JOptionPane.showConfirmDialog(null, "Deseja continuar?", "continuar",
+                    JOptionPane.YES_NO_CANCEL_OPTION);
+
+            if (continuarPrograma == JOptionPane.NO_OPTION) {
+                JOptionPane.showMessageDialog(null, "Programa finalizado");
+                break;
+            }
+
+            if (continuarPrograma == JOptionPane.CANCEL_OPTION) {
+                JOptionPane.showMessageDialog(null, "Programa Concluído");
+                break;
+            }
+        }
+
+        /*
         double valorMoeda = Double.parseDouble(JOptionPane.showInputDialog(null, "Insira um valor:"));
 
-        Object[] moedaConverter = {"Reais -> Dólar", "Reais -> Euro", "Reais -> Libras Esterlinas", "Reais -> Peso argentino",
-        "Reais -> Peso Chileno", "Dólar -> Reais", "Euro -> Reais", "Libras Esterlinas -> Reais", "Peso argentino ->  Reais", "Peso Chileno -> Reais"};
 
-        JOptionPane.showInputDialog(null, "Escolha a moeda para a qual você deseja converter", "Menu", JOptionPane.PLAIN_MESSAGE, null, moedaConverter, "Conversor de moeda").toString();
+        JOptionPane.showMessageDialog(null, "O valor da conversão é de R$ 25.10");
 
+        JOptionPane.showMessageDialog(null, "Valor invalido");
+
+        JOptionPane.showConfirmDialog(null, "Deseja continuar?");
+
+
+
+        */
     }
 }
