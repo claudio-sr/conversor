@@ -1,17 +1,17 @@
 package taxas;
 
 import views.OpcoesDeMoedas;
+import views.ValorDeEntrada;
 
 import javax.swing.*;
 
 public class TaxasDeConversao {
 
     OpcoesDeMoedas opcoesDeMoedas = new OpcoesDeMoedas();
+    ValorDeEntrada valorDeEntrada = new ValorDeEntrada();
         public void opcoesDeConversao() {
 
             try {
-
-
                 double[] valorTaxas = {
                         5.00,
                         5.24,
@@ -27,8 +27,7 @@ public class TaxasDeConversao {
                         1 / 0.0060,
                 };
 
-//                JOptionPane.showInputDialog(null, "Escolha a moeda para a qual você deseja converter",
-//                        "Menu Moedas", JOptionPane.QUESTION_MESSAGE, null, moedaConverter, moedaConverter[0]);
+                valorDeEntrada.entrada();
 
                 opcoesDeMoedas.opcoes();
 
