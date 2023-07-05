@@ -5,7 +5,6 @@ public class Main {
 
         Menu menu = new Menu();
 
-
         while(true) {
             menu.CallMenu();
 
@@ -24,11 +23,6 @@ public class Main {
         }
 
         /*
-        double valorMoeda = Double.parseDouble(JOptionPane.showInputDialog(null, "Insira um valor:"));
-
-
-        JOptionPane.showMessageDialog(null, "O valor da conversão é de R$ 25.10");
-
         JOptionPane.showMessageDialog(null, "Valor invalido");
 
         JOptionPane.showConfirmDialog(null, "Deseja continuar?");

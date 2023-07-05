@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class OpcoesDeMoedas {
 
-    public void opcoes() {
+    public int opcoes() {
 
         Object[] moedaConverter = {
                 "Reais -> Dólar",
@@ -19,8 +19,17 @@ public class OpcoesDeMoedas {
                 "Peso Chileno -> Reais"
         };
 
-        JOptionPane.showInputDialog(null, "Escolha a moeda para a qual você deseja converter",
+        String moedaEscolhida = (String) JOptionPane.showInputDialog(null, "Escolha a moeda para a qual você deseja converter",
                 "Menu Moedas", JOptionPane.QUESTION_MESSAGE, null, moedaConverter, moedaConverter[0]);
 
+        int indice = 0;
+
+        for (int i = 0; i < moedaConverter.length; i++) {
+            if (moedaEscolhida.equals(moedaConverter[i])) {
+                indice = i;
+                break;
+            }
+        }
+        return indice;
     }
 }
